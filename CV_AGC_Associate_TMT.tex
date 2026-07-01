@@ -1,0 +1,167 @@
+\documentclass{resume}
+\usepackage[left=0.65in,top=0.5in,right=0.65in,bottom=0.55in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+
+%--- Color theme ----------------------------------------------------------
+\definecolor{accent}{RGB}{0,70,127}          % professional navy
+
+%--- Colored name ---------------------------------------------------------
+\makeatletter
+\renewcommand{\printname}{%
+  \begingroup
+    \hfil{\namesize\bf\color{accent}\@name}\hfil
+    \nameskip\break
+  \endgroup
+}
+\makeatother
+
+%--- Colored section header + rule ----------------------------------------
+\renewenvironment{rSection}[1]{%
+  \sectionskip
+  {\color{accent}\MakeUppercase{\bf #1}}%
+  \sectionlineskip
+  {\color{accent}\hrule}%
+  \begin{list}{}{\leftmargin=1.5em}%
+  \item[]
+}{%
+  \end{list}
+}
+
+%--- Summary block (no list indent) ----------------------------------------
+\newenvironment{summaryBlock}{%
+  \sectionskip
+  {\color{accent}\MakeUppercase{\bf Professional Summary}}%
+  \sectionlineskip
+  {\color{accent}\hrule}%
+  \smallskip\noindent\ignorespaces
+}{%
+  \par\medskip
+}
+
+%--- Filled bullets, tighter spacing --------------------------------------
+\renewenvironment{rSubsection}[4]{%
+  {\bf #1} \hfill {#2}%
+  \ifthenelse{\equal{#3}{}}{}{%
+    \\
+    {\em #3} \hfill {#4}%
+  }\smallskip
+  \begin{list}{\small\textbullet}{\leftmargin=1.5em}%
+    \itemsep -0.5em \vspace{-0.5em}
+}{%
+  \end{list}%
+  \vspace{0.3em}
+}
+
+%--- Contact --------------------------------------------------------------
+\name{Lening Li}
+\address{Boston, MA, USA}
+\address{%
+  +1\,(774)\,823\,2639 \;$|$\;
+  \href{mailto:leningli@outlook.com}{leningli@outlook.com} \;$|$\;
+  \href{https://lening.li}{lening.li} \;$|$\;
+  \href{https://linkedin.com/in/lening-li}{linkedin.com/in/lening-li}%
+}
+
+\begin{document}
+
+%--- PROFESSIONAL SUMMARY -------------------------------------------------
+\begin{summaryBlock}
+MBA candidate at Carnegie Mellon Tepper with a Ph.D.\ in Robotics Engineering
+and 5+ years leading technology teams at enterprise scale.
+Deep domain expertise in AI/ML, autonomous systems, and software infrastructure
+--- the core of the TMT landscape.
+Track record of managing complex, multi-stakeholder projects from scoping
+through delivery under strict deadlines, coaching junior engineers, and
+communicating technical value to non-technical stakeholders.
+Seeking to apply quantitative rigor, TMT domain fluency, and
+entrepreneurial drive to investment banking deal execution.
+\end{summaryBlock}
+
+%--- EDUCATION ------------------------------------------------------------
+\begin{rSection}{Education}
+
+{\bf Carnegie Mellon University, Tepper School of Business} \hfill Pittsburgh, PA \\
+MBA \hfill {\em Expected May 2028}
+\begin{list}{\small\textbullet}{\leftmargin=1.5em}
+  \itemsep -0.5em \vspace{-0.5em}
+  \item Coursework: Corporate Finance, Valuation, Financial Accounting, Statistics \& Data Analysis
+\end{list}
+
+\smallskip
+{\bf Worcester Polytechnic Institute} \hfill Worcester, MA \\
+Ph.D.\ in Robotics Engineering \hfill Dec.\ 2022 \\
+M.S.\ in Robotics Engineering \hfill May 2018 \\
+M.S.\ in Computer Science \hfill May 2016
+
+\smallskip
+{\bf Harbin Institute of Technology} \hfill China \\
+B.S.\ in Computer Science, \emph{Summa Cum Laude} (Top 5\% of class) \hfill Jul.\ 2014 \\
+B.A.\ in English Language \& Literature \hfill Jul.\ 2014
+
+\end{rSection}
+
+%--- PROFESSIONAL EXPERIENCE ----------------------------------------------
+\begin{rSection}{Professional Experience}
+
+\begin{rSubsection}{Senior Software Engineer}{Oct.\ 2022 -- Present}{Symbotic}{Wilmington, MA}
+\item Manage cross-functional project delivery across engineering, controls, and operations teams --- coordinating timelines, resolving blockers, and ensuring milestones are met under aggressive deadlines.
+\item Lead technical scoping, design reviews, and stakeholder presentations for multi-agent AI systems deployed across fleets of thousands of autonomous robots at enterprise-scale warehouse clients.
+\item Identified and championed a new path-planning initiative that reduced fleet deadlock incidents, securing buy-in from product leadership and driving the project from concept through production deployment.
+\item Translate complex technical concepts into clear executive-level communications for product leadership and external partners, driving alignment across diverse audiences.
+\item Mentor and develop junior engineers; define project goals, track performance, and provide structured feedback to accelerate team output.
+\end{rSubsection}
+
+\begin{rSubsection}{Robotic Lab Advisor}{Dec.\ 2025 -- Present}{Harvard University}{Cambridge, MA}
+\item Advise graduate research teams on project scoping, technical strategy, and milestone execution --- bridging academic research and commercial deployment.
+\item Built and managed end-to-end AI training infrastructure on cloud GPU platforms, overseeing budgets, vendor selection, and resource allocation.
+\end{rSubsection}
+
+\begin{rSubsection}{Senior Software Engineer}{Oct.\ 2021 -- Aug.\ 2022}{Berkshire Grey}{Bedford, MA}
+\item Led a cross-functional initiative to redesign robotic perception and manipulation pipelines, managing scope and delivery across hardware and software teams.
+\item Drove end-to-end system performance improvements by identifying bottlenecks, proposing solutions, and managing implementation --- cutting system latency and boosting throughput.
+\end{rSubsection}
+
+\begin{rSubsection}{President, Graduate Student Government}{Jan.\ 2019 -- May\ 2020}{Worcester Polytechnic Institute}{Worcester, MA}
+\item Led WPI's graduate student government, managing competing stakeholder interests across students, faculty, senior administration, and the Board of Trustees.
+\item Escalated student housing concerns to the Board of Trustees and served on the Provost Search Committee, demonstrating institutional influence and structured advocacy.
+\item Appointed by the university president to formally represent the graduate student body in institutional governance and strategic decision-making.
+\end{rSubsection}
+
+\end{rSection}
+
+%--- TMT DOMAIN EXPERTISE -------------------------------------------------
+\begin{rSection}{TMT Domain Expertise}
+\begin{list}{\small\textbullet}{\leftmargin=1.5em}
+  \itemsep -0.5em \vspace{-0.5em}
+  \item \textbf{AI / Machine Learning:} Deep fluency in the AI value chain --- reinforcement learning, generative AI (VLA models), computer vision, and enterprise ML deployment.
+  \item \textbf{Robotics \& Autonomous Systems:} Hands-on experience across the full robotics stack (perception, planning, control), including DARPA-funded programs and production autonomous fleets.
+  \item \textbf{Enterprise Software \& Infrastructure:} Built distributed real-time systems at scale; experienced with cloud GPU infrastructure, multi-agent architectures, and system integration.
+\end{list}
+\end{rSection}
+
+%--- DEAL-RELEVANT SKILLS -------------------------------------------------
+\begin{rSection}{Relevant Skills}
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{3ex}} l }
+Financial Analysis   & Valuation, Financial Modeling, DCF, Comps (via MBA coursework) \\
+Quantitative         & Ph.D.-level Statistics, Optimization, Stochastic Modeling, Data Analysis \\
+Communication        & Executive Presentations, Technical Writing, Stakeholder Management \\
+Project Management   & Multi-workstream Coordination, Timeline Management, Risk Mitigation \\
+Languages            & English (Fluent), Chinese (Native)
+\end{tabular}
+\end{rSection}
+
+
+%--- PUBLICATIONS \& RECOGNITION ------------------------------------------
+\begin{rSection}{Publications \& Recognition}
+\textbf{12 peer-reviewed publications} in top AI, robotics, and control venues including
+ICRA, IJCAI (15\% acceptance rate), CDC, ACC, and IEEE Transactions on Automation Science
+and Engineering. \\[3pt]
+\href{https://scholar.google.com/citations?user=KWUJ10wAAAAJ}{Google Scholar}\\[3pt]
+\textbf{Alex F.\ Backlin Fund Scholarship}, Worcester Polytechnic Institute, 2021
+\end{rSection}
+
+\end{document}

@@ -1,0 +1,169 @@
+\documentclass{resume}
+\usepackage[left=0.65in,top=0.5in,right=0.65in,bottom=0.55in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+
+%--- Color theme ----------------------------------------------------------
+\definecolor{accent}{RGB}{0,70,127}          % professional navy
+
+%--- Colored name ---------------------------------------------------------
+\makeatletter
+\renewcommand{\printname}{%
+  \begingroup
+    \hfil{\namesize\bf\color{accent}\@name}\hfil
+    \nameskip\break
+  \endgroup
+}
+\makeatother
+
+%--- Colored section header + rule ----------------------------------------
+\renewenvironment{rSection}[1]{%
+  \sectionskip
+  {\color{accent}\MakeUppercase{\bf #1}}%
+  \sectionlineskip
+  {\color{accent}\hrule}%
+  \begin{list}{}{\leftmargin=1.5em}%
+  \item[]
+}{%
+  \end{list}
+}
+
+%--- Summary block (no list indent) ----------------------------------------
+\newenvironment{summaryBlock}{%
+  \sectionskip
+  {\color{accent}\MakeUppercase{\bf Professional Summary}}%
+  \sectionlineskip
+  {\color{accent}\hrule}%
+  \smallskip\noindent\ignorespaces
+}{%
+  \par\medskip
+}
+
+%--- Filled bullets, tighter spacing --------------------------------------
+\renewenvironment{rSubsection}[4]{%
+  {\bf #1} \hfill {#2}%
+  \ifthenelse{\equal{#3}{}}{}{%
+    \\
+    {\em #3} \hfill {#4}%
+  }\smallskip
+  \begin{list}{\small\textbullet}{\leftmargin=1.5em}%
+    \itemsep -0.5em \vspace{-0.5em}
+}{%
+  \end{list}%
+  \vspace{0.3em}
+}
+
+%--- Contact --------------------------------------------------------------
+\name{Lening Li}
+\address{Boston, MA, USA}
+\address{%
+  +1\,(774)\,823\,2639 \;$|$\;
+  \href{mailto:leningli@outlook.com}{leningli@outlook.com} \;$|$\;
+  \href{https://lening.li}{lening.li} \;$|$\;
+  \href{https://linkedin.com/in/lening-li}{linkedin.com/in/lening-li}%
+}
+
+\begin{document}
+
+%--- PROFESSIONAL SUMMARY -------------------------------------------------
+\begin{summaryBlock}
+AI/ML engineer with a Ph.D.\ in Robotics Engineering and 5+ years of industry experience
+delivering production AI systems at enterprise scale. Expertise spans reinforcement learning,
+game-theoretic AI, and generative AI --- including end-to-end VLA model training on GPU cloud.
+Track record leading cross-functional AI initiatives with solutions deployed across fleets of
+thousands of robots. Pursuing an MBA at Carnegie Mellon Tepper to complement technical depth
+with strategic business leadership.
+\end{summaryBlock}
+
+%--- CORE COMPETENCIES ----------------------------------------------------
+\begin{rSection}{Core Competencies}
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{3ex}} l }
+AI/ML             & Reinforcement Learning, Deep Learning, Optimal Control, Game Theory \\
+Generative AI     & Vision-Language-Action (VLA) Models, PyTorch \\
+Systems           & Multi-Agent Systems, Distributed AI, Real-Time Decision Making \\
+Cloud             & Nebius GPU Cloud \\
+Languages         & English (Fluent), Chinese (Native)
+\end{tabular}
+\end{rSection}
+
+%--- PROFESSIONAL EXPERIENCE ----------------------------------------------
+\begin{rSection}{Professional Experience}
+
+\begin{rSubsection}{Robotics Lab Advisor}{Dec.\ 2025 -- Present}{Harvard University}{Cambridge, MA}
+\item Built end-to-end generative AI training pipelines for Vision-Language-Action (VLA) models on Nebius GPU cloud, covering distributed training infrastructure and model evaluation.
+\item Consult graduate AI research teams on algorithm design, system architecture, and evaluation methodology --- bridging academic research and production deployment.
+\end{rSubsection}
+
+\begin{rSubsection}{Senior Software Engineer}{Oct.\ 2022 -- Present}{Symbotic}{Wilmington, MA}
+\item Architected and deployed production multi-agent AI decision systems in C++ for coordinated fleets of thousands of autonomous warehouse robots.
+\item Designed real-time AI planning pipelines meeting strict latency requirements at enterprise scale; improved fleet robustness through state estimation and fault-tolerant behavior architectures.
+\item Led cross-functional initiatives across systems, controls, and operations teams to deliver integrated AI solutions in a high-stakes production environment.
+\end{rSubsection}
+
+\begin{rSubsection}{Senior Software Engineer}{Oct.\ 2021 -- Aug.\ 2022}{Berkshire Grey}{Bedford, MA}
+\item Led development of computer vision and manipulation AI enabling robust grasping of novel, previously unseen objects (ROS, C++, Python).
+\item Cut end-to-end latency by overhauling inter-process communication and AI inference pipelines for real-time robotic picking systems.
+\end{rSubsection}
+
+\end{rSection}
+
+%--- REPRESENTATIVE PROJECTS ----------------------------------------------
+\begin{rSection}{Representative Projects}
+
+\begin{rSubsection}{DARPA SI3-CMD}{Jan.\ 2019 -- Aug.\ 2020}{Researcher}{Worcester, MA}
+\item Served as technical lead for an industry-partnered DARPA project with Scientific Systems Company Inc.\ (SSCI), delivering AI research outcomes on contract.
+\item Developed a game-theoretic AI framework for strategic deceptive planning; improved mission success probability by exploiting information asymmetry within a formal hypergame model.
+\end{rSubsection}
+
+\begin{rSubsection}{DARPA Robotics Challenge}{Aug.\ 2014 -- May\ 2015}{Researcher}{Worcester, MA}
+\item Designed motion planning and human-robot interaction algorithms for the Boston Dynamics Atlas humanoid robot; WPI-CMU team ranked \textbf{7th out of 24} at the DARPA Robotics Challenge Finals.
+\end{rSubsection}
+
+\begin{rSubsection}{Optimal Control and Reinforcement Learning for Stochastic Systems under Temporal Logic Specifications}{Aug.\ 2016 -- Aug.\ 2022}{Ph.D.\ Researcher}{Worcester, MA}
+\item Developed a principled framework translating probabilistic temporal logic specifications into chance-constrained control problems with formal satisfaction guarantees.
+\item Proposed scalable, model-free reinforcement learning algorithms for continuous stochastic systems, improving sample efficiency and enabling real-world deployment.
+\end{rSubsection}
+
+\end{rSection}
+
+%--- EDUCATION ------------------------------------------------------------
+\begin{rSection}{Education}
+
+{\bf Carnegie Mellon University, Tepper School of Business} \hfill Pittsburgh, PA \\
+MBA \hfill {\em Expected May 2028}
+
+\smallskip
+{\bf Worcester Polytechnic Institute} \hfill Worcester, MA \\
+Ph.D.\ in Robotics Engineering \hfill Dec.\ 2022 \\
+M.S.\ in Robotics Engineering \hfill May 2018 \\
+M.S.\ in Computer Science \hfill May 2016
+
+\smallskip
+{\bf Harbin Institute of Technology} \hfill China \\
+B.S.\ in Computer Science, \emph{Summa Cum Laude} (Top 5\% of class) \hfill Jul.\ 2014
+
+\end{rSection}
+
+%--- LEADERSHIP -----------------------------------------------------------
+\begin{rSection}{Leadership}
+
+\begin{rSubsection}{President, Graduate Student Government}{Jan.\ 2019 -- May\ 2020}{Worcester Polytechnic Institute}{Worcester, MA}
+\item Led WPI's graduate student government, managing competing stakeholder interests across students, faculty, senior administration, and the Board of Trustees.
+\item Escalated student housing concerns to the Board of Trustees and served on the Provost Search Committee, demonstrating institutional influence and structured advocacy.
+\end{rSubsection}
+
+\end{rSection}
+
+%--- PUBLICATIONS & RECOGNITION -------------------------------------------
+\begin{rSection}{Publications \& Recognition}
+\textbf{12 peer-reviewed publications} in top AI, robotics, and control venues including
+ICRA, IJCAI (15\% acceptance rate), CDC, ACC, and IEEE Transactions on Automation Science
+and Engineering. \\[3pt]
+\href{https://scholar.google.com/citations?user=KWUJ10wAAAAJ}{Google Scholar}\\[3pt]
+\textbf{Alex F.\ Backlin Fund Scholarship}, Worcester Polytechnic Institute, 2021
+\end{rSection}
+
+\end{document}
