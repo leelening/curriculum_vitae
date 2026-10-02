@@ -2,7 +2,7 @@
 \usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry}
 
 % Chinese support (Overleaf-safe)
-\usepackage[UTF8]{ctex}
+\usepackage[UTF8,fontset=fandol]{ctex}
 
 \usepackage{bibentry}
 \usepackage{url}
@@ -16,6 +16,7 @@
 \address{+1 (774) 823 2639 \\ leningli@outlook.com}
 
 \begin{document}
+\small
 
 \nobibliography{refs}
 \bibliographystyle{ieeetr}
@@ -98,7 +99,11 @@
 %========================================================================================
 \begin{rSection}{行业与学术顾问经历}
 
-\begin{rSubsection}{机器人实验室顾问}{2025.12 -- 至今}{哈佛大学}{美国 马萨诸塞州 剑桥}
+\begin{rSubsection}{研究附属人员（Research Affiliate）}{2026.09 -- 至今}{耶鲁大学}{美国 康涅狄格州 纽黑文}
+\item 与 Na Li 教授合作，研究面向机器人的智能体人工智能（Agentic AI）。
+\end{rSubsection}
+
+\begin{rSubsection}{机器人实验室顾问}{2025.12 -- 至今}{哈佛大学}{美国 马萨诸塞州 奥尔斯顿}
 \item 指导学生在算法设计、系统评估与可复现实验方法上开展机器人科研项目。
 \item 指导学生深入掌握强化学习、运动规划、控制理论与安全关键系统设计，连接理论研究与生产部署。
 \item 通过结构化研究评审、项目范围界定与精准技术反馈，加速实验室整体研究产出。
@@ -107,7 +112,7 @@
 \begin{rSubsection}{高级软件工程师}{2022.10 -- 2026.09}{Symbotic}{美国 马萨诸塞州 威明顿}
 \item 设计并部署面向仓储机器人集群（数千台）的生产级多智能体路径规划与协同算法（C++）。
 \item 通过改进控制设计、状态估计与容错行为架构，提升机器人集群的整体鲁棒性。
-\item 优化实时决策流水线，满足严格时延要求，支持数千台自主机器人并发稳定运行。
+\item 担任远程操作系统的技术负责人，协调研发与运营团队，将系统交付至生产环境。
 \end{rSubsection}
 
 \begin{rSubsection}{高级软件工程师}{2021.10 -- 2022.08}{Berkshire Grey}{美国 马萨诸塞州 贝德福德}
@@ -129,12 +134,15 @@
 %========================================================================================
 % 代表性技能
 %========================================================================================
+\Needspace{12\baselineskip}
 \begin{rSection}{代表性技能}
-\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-编程语言： & C/C++, Python, MATLAB \\
-机器人与控制： & 运动规划，最优控制，强化学习 \\
-机器人系统： & ROS，ROS 2，分布式机器人系统 \\
-机器学习： & PyTorch，TensorFlow \\
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{3ex}} l }
+编程语言： & C++, Python, C, MATLAB \\
+机器人： & 运动规划，强化学习，最优控制 \\
+规划与控制： & 状态估计，控制设计，远程操作 \\
+研究： & 形式化方法，博弈论，面向机器人的智能体人工智能 \\
+系统： & ROS / ROS 2，Linux，多机器人系统 \\
+学习与工具： & PyTorch，TensorFlow，OpenCV，Git，Docker，gRPC \\
 语言能力： & 英语（流利），中文（母语）
 \end{tabular}
 \end{rSection}
@@ -171,7 +179,7 @@
 %========================================================================================
 \begin{rSection}{代表性研究项目}
 
-\begin{rSubsection}{DARPA Robotics Challenge}{2014.08 -- 2015.05}{研究人员}{美国 马萨诸塞州 伍斯特}
+\begin{rSubsection}{DARPA Robotics Challenge}{2014.09 -- 2015.06}{研究人员}{美国 马萨诸塞州 伍斯特}
 \item 与 WPI-CMU 团队合作，在 DARPA Robotics Challenge 决赛中参与波士顿动力（Boston Dynamics）Atlas 人形机器人项目。
 \item 设计用于开门、阀门操作与工具抓取的机械臂运动规划算法。
 \item 设计人机交互界面，提升操作员态势感知与任务执行效率。

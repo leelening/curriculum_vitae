@@ -82,7 +82,7 @@ pdflatex Resume.tex
 - **Contact Information**: Email, phone, location
 - **Research Interests**: Reinforcement Learning, Optimal Control, Game Theory, Formal Methods
 - **Education**: Carnegie Mellon University (MBA), WPI (Ph.D., M.S.)
-- **Professional Experience**: Symbotic, Berkshire Grey, Harvard University
+- **Professional Experience**: Yale University, Harvard University, Symbotic, Berkshire Grey
 - **Publications**: Journal papers, conference papers, arXiv preprints
 - **Teaching Experience**: Graduate courses at WPI
 - **Honors & Awards**: Academic achievements
@@ -91,8 +91,9 @@ pdflatex Resume.tex
 ## About the Author
 
 **Lening Li**
+- Research Affiliate at Yale University
 - Robotic Lab Advisor at Harvard University
-- Senior Software Engineer at Symbotic
+- Former Senior Software Engineer at Symbotic (Oct. 2022 – Sep. 2026)
 - Ph.D. in Robotics Engineering (WPI)
 - MBA Candidate at Carnegie Mellon University
 

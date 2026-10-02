@@ -24,6 +24,7 @@
 
 \usepackage[parfill]{parskip} % Remove paragraph indentation
 \usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
+\usepackage{needspace}
 \usepackage{ifthen} % Required for ifthenelse statements
 
 \pagestyle{empty} % Suppress page numbers
@@ -93,6 +94,7 @@
 %----------------------------------------------------------------------------------------
 
 \newenvironment{rSection}[1]{ % 1 input argument - section name
+  \Needspace{6\baselineskip}
   \sectionskip
   \MakeUppercase{\bf #1} % Section title
   \sectionlineskip
@@ -106,6 +108,7 @@
 }
 
 \newenvironment{nSubsection}[4]{ % 4 input arguments - degree, year(s) earned, school name, location, and Highlight
+ \Needspace{5\baselineskip}
  {\bf #1} \hfill {#2} % Bold job title and date on the right
  \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the company name and location line
   \\
@@ -114,6 +117,7 @@
 }
 
 \newenvironment{hSubsection}[5]{ % 5 input arguments - degree, year(s) earned, school name, location, and Highlight
+ \Needspace{5\baselineskip}
  {\bf #1} \hfill {#2} % Bold job title and date on the right
  \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the company name and location line
   \\
@@ -125,6 +129,7 @@
 
 
 \newenvironment{rSubsection}[4]{ % 4 input arguments - job title, year(s) employed, company name, and location
+ \Needspace{5\baselineskip}
  {\bf #1} \hfill {#2} % Bold job title and date on the right
  \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the company name and location line
   \\
