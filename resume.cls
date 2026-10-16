@@ -131,9 +131,9 @@
 \newenvironment{rSubsection}[4]{ % 4 input arguments - job title, year(s) employed, company name, and location
  \Needspace{5\baselineskip}
  {\bf #1} \hfill {#2} % Bold job title and date on the right
- \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the company name and location line
+ \ifthenelse{\equal{\detokenize{#3}}{} \AND \equal{\detokenize{#4}}{}}{}{ % Omit the metadata line only when both fields are empty
   \\
-  {\em #3} \hfill {#4} % Italic company name and location
+  \mbox{}{\em #3} \hfill {#4} % Keep the location aligned right even without a role
   }\smallskip
   \begin{list}{$\circ$}{\leftmargin=1.5em} % \circ used for bullets, no indentation
    \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
